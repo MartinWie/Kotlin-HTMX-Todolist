@@ -12,6 +12,5 @@ fun main() {
 }
 
 fun Application.module() {
-    configureMonitoring()
     configureRouting()
 }
