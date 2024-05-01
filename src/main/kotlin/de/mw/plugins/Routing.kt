@@ -1,4 +1,4 @@
-package com.example.plugins
+package de.mw.plugins
 
 import io.ktor.http.*
 import io.ktor.server.application.*
