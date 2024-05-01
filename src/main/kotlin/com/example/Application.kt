@@ -6,7 +6,8 @@ import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 
 fun main() {
-    embeddedServer(Netty, port = 8080, host = "0.0.0.0", module = Application::module)
+    val envHost = System.getenv("APP_HOST")
+    embeddedServer(Netty, port = 8080, host = envHost ?: "0.0.0.0", module = Application::module)
         .start(wait = true)
 }
 
