@@ -12,10 +12,9 @@ fun htmlBasePage(pageTitle: String, bodyTags: TagConsumer<StringBuilder>.() -> U
             // HTMX 1.9.11 minified
             script { src = "/static/htmx.min.js" }
 
-            link {
-                rel = "stylesheet"
-                href = "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-            }
+            // Tailwind
+            script { src = "https://cdn.tailwindcss.com/" }
+
             script(type = ScriptType.textJavaScript) {
                 unsafe {
                     // Using unsafe{}.raw() to insert raw HTML/JS.
