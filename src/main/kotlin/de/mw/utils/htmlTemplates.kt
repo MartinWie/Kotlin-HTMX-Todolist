@@ -8,7 +8,10 @@ fun htmlBasePage(pageTitle: String, bodyTags: TagConsumer<StringBuilder>.() -> U
     return "<!DOCTYPE html>" + buildHTMLString {
         head {
             title = pageTitle
-            script { src = "https://unpkg.com/htmx.org@1.9.11" }
+
+            // HTMX 1.9.11 minified
+            script { src = "/static/htmx.min.js" }
+
             link {
                 rel = "stylesheet"
                 href = "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
@@ -52,12 +55,10 @@ fun buildHTMLString(builderAction: TagConsumer<StringBuilder>.() -> Unit): Strin
     }
 }
 
-fun TagConsumer<*>.createTodoTag(todoId: String, todoValue: String, classes: String? = null) {
+fun TagConsumer<*>.createTodoTag(todoId: String, todoValue: String) {
     p {
         this.id = todoId
-        if (classes != null) {
-            this.classes = setOf(classes)
-        }
+        this.classes = setOf("border-gray-800", "rounded-md", "border-2")
         hxDelete("/todo/$todoId")
         hxSwap(HxSwapOption.DELETE)
         +todoValue
