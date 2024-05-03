@@ -5,10 +5,16 @@ create a template for full stack kotlin projects.
 
 ## Build the project
 
-Install tailwind:
+### Install tooling:
+
+Tailwind: for CSS generation
+Browser-sync: auto refresh browser on changes, for details checkout 'startServer.sh'
+Entr: trigger action on file change, for details checkout 'startServer.sh'
 
 ```Terminal
 npm install -D tailwindcss
+npm install -g browser-sync 
+brew install entr
 ```
 
 ## Project todos:

@@ -17,7 +17,7 @@ fun Application.configureRouting() {
 
     install(StatusPages) {
         exception<Throwable> { call, cause ->
-            call.respondText(text = "500: $cause" , status = HttpStatusCode.InternalServerError)
+            call.respondText(text = "500: $cause", status = HttpStatusCode.InternalServerError)
         }
     }
     routing {
@@ -37,7 +37,7 @@ fun Application.configureRouting() {
                     input {
                         type = InputType.text
                         name = "todoItem"
-                        classes = setOf("border-4", "border-black-800", "rounded-md", "border-solid", "m-2")
+                        classes = setOf("border-4", "border-black-800", "rounded-md", "border-solid", "m-4")
                     }
 
                     button {

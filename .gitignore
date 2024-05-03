@@ -39,3 +39,8 @@ out/
 node_modules/
 package-lock.json
 package.json
+
+### Server + Frontend autoreload
+server.log
+server.pid
+browser-sync.pid
