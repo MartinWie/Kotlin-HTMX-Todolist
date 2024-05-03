@@ -31,6 +31,8 @@ The script uses entr to trigger another script on every *.kt file change.
 The second script (start server) builds our CSS and runs the app server with gradle.
 After a certain log stage is reached the script starts/refreshes a browser session with browser-sync to live update the
 page.
+If startServer script receives an user exit, we run a stop script and break out of the loop to exit the
+buildAndReloadBrowserOnsave.sh script.
 
 ## Project todos:
 
