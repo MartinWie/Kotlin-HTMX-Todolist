@@ -19,8 +19,6 @@ brew install entr
 
 ## Project todos:
 
-- Get tailwind into project instead of using cdn
-- Setup entr and auto server reload on save
 - Update readme
 - Setup tailwind theme or at least make todos not look ugly
 - prep HTMX + Kotlin + Ktor Template repo
