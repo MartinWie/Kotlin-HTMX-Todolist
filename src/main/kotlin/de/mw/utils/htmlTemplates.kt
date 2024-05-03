@@ -12,8 +12,11 @@ fun htmlBasePage(pageTitle: String, bodyTags: TagConsumer<StringBuilder>.() -> U
             // HTMX 1.9.11 minified
             script { src = "/static/htmx.min.js" }
 
-            // Tailwind
-            script { src = "https://cdn.tailwindcss.com/" }
+            // CSS (mainly Tailwind)
+            link {
+                rel = "stylesheet"
+                href = "/static/output.css"
+            }
 
             script(type = ScriptType.textJavaScript) {
                 unsafe {
