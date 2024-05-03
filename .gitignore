@@ -34,3 +34,8 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### Tailwind / Node ###
+node_modules/
+package-lock.json
+package.json

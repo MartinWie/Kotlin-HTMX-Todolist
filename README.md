@@ -3,6 +3,14 @@
 In my KotlinCodeJourney repo I tested the basics of Kotlin + HTMX this repo is to deepen this experiment and later on
 create a template for full stack kotlin projects.
 
+## Build the project
+
+Install tailwind:
+
+```Terminal
+npm install -D tailwindcss
+```
+
 ## Project todos:
 
 - Get tailwind into project instead of using cdn
