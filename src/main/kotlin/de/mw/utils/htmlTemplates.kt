@@ -45,7 +45,7 @@ fun htmlBasePage(pageTitle: String, bodyTags: TagConsumer<StringBuilder>.() -> U
 
         }
         body {
-            classes = setOf("text-center", "bg-cyan-600")
+            classes = setOf("text-center", "bg-white", "flex", "h-screen", "flex-col", "items-center")
             bodyTags()
         }
     }

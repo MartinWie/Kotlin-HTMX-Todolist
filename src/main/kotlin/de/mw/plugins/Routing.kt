@@ -23,37 +23,43 @@ fun Application.configureRouting() {
     routing {
         get("/") {
             val htmlContent = htmlBasePage("Todo List") {
-                h1 {
-                    classes = setOf("text-4xl", "font-bold", "underline")
-                    +"Todo test app"
-                }
-
-                form {
-                    id = "todo-form"
-                    hxPost("/todo")
-                    hxSwap(HxSwapOption.NONE)
-                    hxResetFormAfterSuccess()
-
-                    input {
-                        type = InputType.text
-                        name = "todoItem"
-                        classes = setOf("border-4", "border-black-800", "rounded-md", "border-solid", "m-4")
+                div {
+                    h1 {
+                        classes = setOf("text-4xl", "font-bold", "underline")
+                        +"Todo test app"
                     }
 
-                    button {
-                        type = ButtonType.submit
-                        +"Add"
+                    form {
+                        id = "todo-form"
+                        hxPost("/todo")
+                        hxSwap(HxSwapOption.NONE)
+                        hxResetFormAfterSuccess()
+
+                        input {
+                            type = InputType.text
+                            name = "todoItem"
+                            classes =
+                                setOf("border-gray-800", "rounded-md", "border-2", "m-4", "px-3", "py-1")
+                        }
+
+                        button {
+                            type = ButtonType.submit
+                            classes =
+                                setOf("ring-offset-background focus-visible:ring-ring whitespace-nowrap rounded-md bg-black px-3 py-2 text-sm font-medium text-white transition-colors hover:bg-black/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50")
+                            +"Add"
+                        }
                     }
-                }
-                div {
-                    id = "todo-input-error"
-                }
+                    div {
+                        id = "todo-input-error"
+                    }
 
-                div {
-                    id = "todos"
+                    div {
+                        id = "todos"
+                        classes = setOf("mb-2 space-y-1 min-w-10")
 
-                    tmpTodoState.keys.reversed().forEach { todoId ->
-                        createTodoTag(todoId, tmpTodoState[todoId]!!)
+                        tmpTodoState.keys.reversed().forEach { todoId ->
+                            createTodoTag(todoId, tmpTodoState[todoId]!!)
+                        }
                     }
                 }
             }
