@@ -34,8 +34,14 @@ page.
 If startServer script receives an user exit, we run a stop script and break out of the loop to exit the
 buildAndReloadBrowserOnsave.sh script.
 
-## Project todos:
+## Project todos( future optimisation will probably not do :D ):
 
 - Setup tailwind theme or at least make todos not look ugly
-- prep HTMX + Kotlin + Ktor Template repo
 - Make use of html templates instead of fully utilizing kotlin dsl to safe CPU on constructing the page every time
+
+## Support me :heart: :star: :money_with_wings:
+
+If this project provided value, and you want to give something back, you can give the repo a star or support me, by
+tipping me a coffee.
+
+<a href="https://buymeacoffee.com/MartinWie" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" width="170"></a>
